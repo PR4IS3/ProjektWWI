@@ -6,10 +6,67 @@
     <Name>ProjektWWI.database</Name>
     <FullPath>ProjektWWI.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>WWIDSVCube.cube</Name>
+      <FullPath>WWIDSVCube.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>WWIDSVCube.partitions</Name>
+          <FullPath>WWIDSVCube.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>DimCity.dim</Name>
+      <FullPath>DimCity.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DimEmployee.dim</Name>
+      <FullPath>DimEmployee.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Date.dim</Name>
+      <FullPath>Date.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Order 1.dim</Name>
+      <FullPath>Order 1.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>WWIDS.ds</Name>
+      <FullPath>WWIDS.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>WWIDSV.dsv</Name>
+      <FullPath>WWIDSV.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>WWIDS</Id>
+            <Name>WWIDS</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=PR4IS3;Integrated Security=SSPI;Initial Catalog=WideWorldImportersDW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>WWIDS</Id>
+            <Name>WWIDS</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
